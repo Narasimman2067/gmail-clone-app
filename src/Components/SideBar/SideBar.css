@@ -1,0 +1,72 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+    background-color:rgb(238, 243, 212) ;
+}
+
+.compose-btn{
+    padding:10px 20px !important;
+    border-radius: 40px !important;
+    margin: 20px 0px 20px 40px !important;
+    max-width: 150px;
+    background-color: rgb(206, 237, 237) !important;
+}
+
+.sidebar Button:hover{
+    box-shadow:1px 1px 2px 1px rgb(150, 157, 154) !important;
+   
+
+}
+
+.sidebarlists{
+    display: flex;
+    align-items: center;
+    height: 35px;
+   width: 200px;
+    border-top-right-radius:20px ;
+    border-bottom-right-radius:20px ;
+    padding: 0px 25px;
+    margin-right: 20px; 
+    font-size: 10px;
+    font-family: monospace;
+
+}
+.sidebarlists:hover{
+    background-color: rgb(247, 221, 212);
+    background: color opacity(0.1px);
+   
+
+}
+
+.sidebarlists svg{
+    color: lightslategray;
+    font-size: 20px;
+    width: 20px;
+
+}
+
+.sidebarlists h2{
+    font-size: 14px;
+    flex: 1;
+    margin-left: 10px;
+    font-weight:100px;
+}
+.sidebarlists p{
+    opacity:1;
+    color: rgb(7, 5, 0);
+    font-size: 13px;
+
+}
+
+.sidebarlists--active{
+    background-color:rgb(210, 218, 246) ;
+}
+.sidebarlists--active svg{
+    color: rgb(39, 36, 36);
+}
+
+
+
+
+
