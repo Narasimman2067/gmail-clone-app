@@ -20,9 +20,10 @@
   position: fixed !important;
   padding-top: 80px;
   width: 84% !important;
-  background-color: blanchedalmond;
+  background-color: rgb(213, 235, 216);
   justify-content: space-between !important;
   border-bottom: 1px solid rgb(227, 224, 223);
+  z-index: 1000;
 }
 .emailcontainer svg {
   font-size: 18px;
@@ -79,30 +80,51 @@
 /* email body contents design */
 
 .emailbody {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid whitesmoke;
-  padding: 0px 10px;
-  height: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) !important;
+align-items: center !important;
+  padding: 10px;
+  background-color: rgb(33, 136, 226);
+  width: 110% !important;
+  padding-left: 10px;
 }
 .emailbody .emailbody-left {
   display: flex;
   align-items: center;
-  min-width: 300px;
-  flex: 20% !important;
 }
-
-.emailbody .emailbody-middle {
+/* .emailbody .emailbody-middle p span {
   display: flex;
   align-items: center;
-  flex: 90% !important;
-  padding-left: 50px !important;
-}
+  flex-wrap: nowrap;
+  text-overflow: hidden !important;
+  overflow: hidden !important;
+} */
+.emailbody .emailbody-middle {
+  display: flex;
+  justify-content:center !important;
+  align-items:left !important;
 
+
+  text-overflow: ellipsis;
+  max-width:700px ;
+  
+  overflow: hidden;
+
+}
 .emailbody .emailbody-right {
   display: flex;
   align-items: center;
-  flex: 10% !important;
+  flex: 10%;
+  justify-content:center;
+  /* text-align: right !important;
+  right: 0px !important;
+  margin-left: 200px !important; */
+}
+.emailbody:hover {
+  background-color: whitesmoke;
+  box-shadow: 2px 1px 2px 1px grey;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* smartphone landscape */
@@ -127,37 +149,22 @@
 
   /* email body */
   .emailbody {
-  
     border-bottom: 1px solid whitesmoke;
-    padding-left:10px;
-    height:auto;
-    min-width: 150px !important;
-  
-   
+    padding-left: 10px;
+    height: auto;
+    /* min-width: 150px !important; */
   }
   .emailbody .emailbody-left {
     display: flex;
     align-items: center;
-    min-width: 150px !important;
-   
-   
   }
-  
+
   .emailbody .emailbody-middle {
-    display: flex;
-    align-items: center;
-  flex: content;
-  padding-right: 20%;
-  padding-left: 10px !important;
-   
-    
+    width: 60% !important;
+    margin-left: 20px !important;
   }
-  
+
   .emailbody .emailbody-right {
-    display: flex;
-    flex-wrap:nowrap;
-    align-items: center;
-    flex: 30% !important;
-    
+    margin-left: 0px !important;
   }
 }

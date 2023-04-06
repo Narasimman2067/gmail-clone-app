@@ -1,0 +1,70 @@
+.compose{
+    position: fixed;
+    bottom: 0px;
+    right: 50px;
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+    min-width: 500px;
+    box-shadow:1px 3px 8px rgb(88, 84, 84) ;
+    background-color: orangered;
+    margin-top: 300px !important;
+   
+}
+.compose .compose-header{
+    display: flex !important;
+    justify-content:space-between;
+    background: black;
+    color: aliceblue;
+    align-items: center;
+    padding: 7px 15px;
+
+}
+.compose .compose-header-left span{
+   
+    font-size: large;
+ 
+  
+}
+.compose .compose-header-right{
+ display: flex;
+ align-items: center;
+}
+
+.compose .compose-header .compose-header-right svg{
+    color: white;
+    font-size: 18px;
+    transition: transform 0.2s ease-in;
+    padding: 3px;
+    align-items: center;
+}
+.compose .compose-header .compose-header-right svg:hover{
+    background-color: rgb(13, 13, 13);
+    border-radius: 50%;
+    transform: scale(1.5);
+}
+
+.compose-body{
+    display: flex;
+    height: 100% !important;
+    
+
+
+}
+
+.compose-body-form{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+.compose-body-form  input,textarea{
+
+    display: flex;
+border: 0px;
+outline: 0px;
+   max-width:800px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  
+
+
+}

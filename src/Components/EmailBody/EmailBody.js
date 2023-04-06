@@ -2,7 +2,7 @@ import React from "react";
 import CheckBoxOutlineBlankOutlinedIcon from "@mui/icons-material/CheckBoxOutlineBlankOutlined";
 import StarOutlineOutlinedIcon from "@mui/icons-material/StarOutlineOutlined";
 
-const EmailBody = () => {
+const EmailBody = ({name,subject,time,message}) => {
   return (
     <div className="emailbody">
       <div className="emailbody-left">
@@ -10,18 +10,18 @@ const EmailBody = () => {
         <StarOutlineOutlinedIcon />
       
 
-        <h4>This clone gmail</h4>
+        <h4>{name}</h4>
       </div>
       <div className="emailbody-middle">
         <div className="emailbody-middle-message">
           <p>
-            <b>Subject</b>
-            This is message body
+            <b>{subject}</b>
+          <span>{message}</span>
           </p>
         </div>
       </div>
       <div className="emailbody-right">
-       <p>2:30 pm</p>
+       <p>{time}</p>
       </div>
     
     </div>
