@@ -1,70 +1,122 @@
-.compose{
-    position: fixed;
-    bottom: 0px;
-    right: 50px;
-    border-radius: 10px 10px 0px 0px;
-    overflow: hidden;
-    min-width: 500px;
-    box-shadow:1px 3px 8px rgb(88, 84, 84) ;
-    background-color: orangered;
-    margin-top: 300px !important;
+.compose {
+  position: fixed;
+  bottom: 0px;
+  right: 50px;
+  border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
+  min-width: 500px;
+  box-shadow: 1px 3px 8px rgb(88, 84, 84);
+  background-color: rgb(255, 250, 249);
+  margin-top: 300px !important;
+}
+.compose .compose-header {
+  display: flex !important;
+  justify-content: space-between;
+  background: black;
+  color: aliceblue;
+  align-items: center;
+  padding: 7px 15px;
+}
+.compose .compose-header-left span {
+  font-size: large;
+}
+.compose .compose-header-right {
+  display: flex;
+  align-items: center;
+}
+
+.compose .compose-header .compose-header-right svg {
+  color: white;
+  font-size: 18px;
+  transition: transform 0.2s ease-in;
+  padding: 3px;
+  align-items: center;
+}
+.compose .compose-header .compose-header-right svg:hover {
+  background-color: rgb(13, 13, 13);
+  border-radius: 50%;
+  transform: scale(1.5);
+}
+
+.compose-body {
+  display: flex;
+  height: 100% !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.compose-body-form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+.compose-body-form input {
+  display: flex;
+  max-width: 800px;
+  height: 40px;
+  border: none !important;
+  outline: 0px !important;
+
+  /* padding-top: 20px;
+  padding-bottom: 5px; */
+  box-shadow: inset 0px 0px 1px rgb(239, 231, 231);
+}
+.compose-body-form textarea {
+  height: auto;
+  font-family: "monsterat", sans-serif !important;
+  padding-top: 5px;
+  text-align: left;
+  font-size: 15px;
+  border: none !important;
+  outline: 0px !important;
+}
+
+.compose-footer {
+  position: absolute;
+  display: flex;
+  top: 370px !important;
+  padding: 0px 10px;
+
+  justify-content: space-between !important;
+}
+.compose-footer-left {
+  display: flex;
+  align-items: center;
+}
+.compose-footer-left button {
+  display: flex;
+  align-items: center;
+  background-color: #297be6;
+  cursor: pointer;
+  border: 0;
+
+  padding:0px 0px 0px 15px;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  font-family:monospace;
+  font-weight:500 ;
+  text-transform: capitalize;
+}
+.compose-footer-left button svg{
+  border-left: 1px solid rgb(216, 213, 213);
+  margin-left:15px ;
+  padding: 6px 2px 6px 2px;
+transition:1s linear 0s;
+}
+.compose-footer-right {
+  display: flex;
+  align-items: center;
+  margin-left: 10px !important;
+  transition:1s linear 0s;
+}
+@media screen and (min-width: 480px) and (max-width: 767px){
+
+  .compose-footer {
    
-}
-.compose .compose-header{
-    display: flex !important;
-    justify-content:space-between;
-    background: black;
-    color: aliceblue;
-    align-items: center;
-    padding: 7px 15px;
-
-}
-.compose .compose-header-left span{
+    top: 355px !important;
    
-    font-size: large;
- 
-  
-}
-.compose .compose-header-right{
- display: flex;
- align-items: center;
-}
-
-.compose .compose-header .compose-header-right svg{
-    color: white;
-    font-size: 18px;
-    transition: transform 0.2s ease-in;
-    padding: 3px;
-    align-items: center;
-}
-.compose .compose-header .compose-header-right svg:hover{
-    background-color: rgb(13, 13, 13);
-    border-radius: 50%;
-    transform: scale(1.5);
-}
-
-.compose-body{
-    display: flex;
-    height: 100% !important;
-    
-
-
-}
-
-.compose-body-form{
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-}
-.compose-body-form  input,textarea{
-
-    display: flex;
-border: 0px;
-outline: 0px;
-   max-width:800px;
-    padding-top: 20px;
-    padding-bottom: 5px;
-  
+  }
 
 
 }

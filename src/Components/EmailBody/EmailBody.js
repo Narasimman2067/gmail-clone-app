@@ -1,6 +1,7 @@
 import React from "react";
 import CheckBoxOutlineBlankOutlinedIcon from "@mui/icons-material/CheckBoxOutlineBlankOutlined";
 import StarOutlineOutlinedIcon from "@mui/icons-material/StarOutlineOutlined";
+import "../EmailBody/EmailBody.css"
 
 const EmailBody = ({name,subject,time,message}) => {
   return (

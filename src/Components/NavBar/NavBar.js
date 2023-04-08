@@ -9,6 +9,12 @@ import AppsIcon from "@mui/icons-material/Apps";
 
 import "../NavBar/NavBar.css";
 const NavBar = () => {
+
+
+ 
+
+ 
+
   return (
     // top of the navbar controller
     <div className="navbar">
@@ -16,7 +22,7 @@ const NavBar = () => {
       {/* /* ******* navbar left- contents ********* */}
 
       <div className="navbar-left">
-        <IconButton>
+        <IconButton> 
           <ReorderIcon />
         </IconButton>
 

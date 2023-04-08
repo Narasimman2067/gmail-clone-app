@@ -23,84 +23,85 @@ import MarkAsUnreadOutlinedIcon from "@mui/icons-material/MarkAsUnreadOutlined";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import VideocamOutlinedIcon from "@mui/icons-material/VideocamOutlined";
 import KeyboardIcon from "@mui/icons-material/Keyboard";
+import { useDispatch } from "react-redux";
+import { openSendMessage } from "../../features/mailSlice";
 const SideBar = () => {
+  const dispatch = useDispatch();
+
   return (
     <div className="sidebar">
-   
-        <Button startIcon={<AddIcon />} className="compose-btn">
-          Compose
-        </Button>
-    
-     
-        <div className="sidebarlists2">
-          <SideBarLists
-            Icon={InboxIcon}
-            title="Inbox"
-            number="224"
-            isactive="true"
-          />
-          <SideBarLists
-            Icon={StarOutlineOutlinedIcon}
-            title="Starred"
-            number="224"
-          />
-          <SideBarLists
-            Icon={AccessTimeOutlinedIcon}
-            title="Snoozed"
-            number="224"
-          />
-          <SideBarLists Icon={SendIcon} title="Sent" number="224" />
-          <SideBarLists Icon={DraftsIcon} title="Drafts" number="2" />
-          <SideBarLists
-            Icon={LabelImportantOutlinedIcon}
-            title="Important"
-            number="24"
-          />
-          <SideBarLists Icon={MessageIcon} title="Chats" number="24" />
-          <SideBarLists
-            Icon={ScheduleSendOutlinedIcon}
-            title="scheduled"
-            number="22"
-          />
-          <SideBarLists
-            Icon={MarkAsUnreadOutlinedIcon}
-            title="All Mail"
-            number="4"
-          />
-          <SideBarLists
-            Icon={ReportGmailerrorredOutlinedIcon}
-            title="Spam"
-            number="224"
-          />
-          <SideBarLists
-            Icon={DeleteOutlineRoundedIcon}
-            title="Bin"
-            number="4"
-          />
-          <SideBarLists Icon={ExpandMoreIcon} title="More" number="4" />
+      <Button startIcon={<AddIcon />} className="compose-btn"
+      onClick={()=>dispatch(openSendMessage())}
+      
+      
+      >
+        Compose
+      </Button>
 
-          <h3 className="sidebarlists-heading" Icon={LabelOutlinedIcon}>
-            Categories
-          </h3>
-          <SideBarLists
-            Icon={PeopleOutlineOutlinedIcon}
-            title="Social"
-            number="4"
-          />
-          <SideBarLists
-            Icon={ErrorOutlineOutlinedIcon}
-            title="Updates"
-            number="4"
-          />
-          <SideBarLists Icon={ForumOutlinedIcon} title="Forums" />
+      <div className="sidebarlists2">
+        <SideBarLists
+          Icon={InboxIcon}
+          title="Inbox"
+          number="224"
+          isactive="true"
+        />
+        <SideBarLists
+          Icon={StarOutlineOutlinedIcon}
+          title="Starred"
+          number="224"
+        />
+        <SideBarLists
+          Icon={AccessTimeOutlinedIcon}
+          title="Snoozed"
+          number="224"
+        />
+        <SideBarLists Icon={SendIcon} title="Sent" number="224" />
+        <SideBarLists Icon={DraftsIcon} title="Drafts" number="2" />
+        <SideBarLists
+          Icon={LabelImportantOutlinedIcon}
+          title="Important"
+          number="24"
+        />
+        <SideBarLists Icon={MessageIcon} title="Chats" number="24" />
+        <SideBarLists
+          Icon={ScheduleSendOutlinedIcon}
+          title="scheduled"
+          number="22"
+        />
+        <SideBarLists
+          Icon={MarkAsUnreadOutlinedIcon}
+          title="All Mail"
+          number="4"
+        />
+        <SideBarLists
+          Icon={ReportGmailerrorredOutlinedIcon}
+          title="Spam"
+          number="224"
+        />
+        <SideBarLists Icon={DeleteOutlineRoundedIcon} title="Bin" number="4" />
+        <SideBarLists Icon={ExpandMoreIcon} title="More" number="4" />
 
-          <SideBarLists Icon={LocalOfferIcon} title="Promotions" />
-          <h3 className="sidebarlists-heading2">Meet</h3>
-          <SideBarLists Icon={VideocamOutlinedIcon} title="New meeting" />
-          <SideBarLists Icon={KeyboardIcon} title="Join a meeting" />
-        </div>
+        <h3 className="sidebarlists-heading" Icon={LabelOutlinedIcon}>
+          Categories
+        </h3>
+        <SideBarLists
+          Icon={PeopleOutlineOutlinedIcon}
+          title="Social"
+          number="4"
+        />
+        <SideBarLists
+          Icon={ErrorOutlineOutlinedIcon}
+          title="Updates"
+          number="4"
+        />
+        <SideBarLists Icon={ForumOutlinedIcon} title="Forums" />
+
+        <SideBarLists Icon={LocalOfferIcon} title="Promotions" />
+        <h3 className="sidebarlists-heading2">Meet</h3>
+        <SideBarLists Icon={VideocamOutlinedIcon} title="New meeting" />
+        <SideBarLists Icon={KeyboardIcon} title="Join a meeting" />
       </div>
-  
+    </div>
   );
 };
 

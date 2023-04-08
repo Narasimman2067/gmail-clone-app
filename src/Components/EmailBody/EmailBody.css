@@ -1,1 +1,60 @@
+/* email body contents design */
 
+.emailbody {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) !important;
+  align-items: center !important;
+  padding: 10px;
+  background-color: rgb(229, 236, 242);
+  width: 110% !important;
+  padding-left: 10px;
+}
+.emailbody .emailbody-left {
+  display: flex;
+  align-items: center;
+}
+
+/* .emailbody .emailbody-middle {
+display:grid !important;
+justify-content: left !important;
+white-space:wrap !important;
+max-width: 700px;
+overflow: hidden;
+} */
+.emailbody .emailbody-right {
+  display: flex;
+  align-items: center;
+  flex: 10%;
+  justify-content: center;
+}
+.emailbody:hover {
+  background-color: whitesmoke;
+  box-shadow: 2px 1px 2px 1px grey;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* smartphone landscape */
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  /* email body */
+  .emailbody {
+    border-bottom: 1px solid whitesmoke;
+    padding-left: 10px;
+    height: auto;
+   
+  }
+  .emailbody .emailbody-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .emailbody .emailbody-middle {
+    width: 60% !important;
+    margin-left: 20px !important;
+  }
+
+  .emailbody .emailbody-right {
+    margin-left: 0px !important;
+  }
+}
