@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     const getContent = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/user/alluser`, {
+        const response = await fetch(`https://gmailclone-backend-j7ay.onrender.com/user/alluser`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
