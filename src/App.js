@@ -31,6 +31,8 @@ function App() {
     };
     getContent();
   }, []);
+
+  
   const isMessageOpen =useSelector(selectSendMessageIsOopen)
   console.log(isMessageOpen)
   return (
