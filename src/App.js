@@ -1,4 +1,5 @@
 
+import { useEffect } from 'react';
 import './App.css';
 import Compose from './Components/Compose/Compose';
 import EmailLists from './Components/Emaillists/EmailLists';
@@ -9,7 +10,27 @@ import {useSelector} from "react-redux";
 
 
 function App() {
-
+  // conect that front and backend
+  const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MzI2MTA3OTRmM2RjYzI3ZTliYjUwYiIsImlhdCI6MTY4MTAyODM5NiwiZXhwIjoxNjgxNjMzMTk2fQ.KSxm8yliSUoIWR158sQ578pHvI0dbedBX6P2Is2b9jc";
+  useEffect(() => {
+    const getContent = async () => {
+      try {
+        const response = await fetch(`http://localhost:5000/user/alluser`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            "x-auth-token":token
+          }
+         
+        })
+        const data =await response.json()
+        console.log(data)
+      } catch (error) {
+        console.log(error)
+      }
+    };
+    getContent();
+  }, []);
   const isMessageOpen =useSelector(selectSendMessageIsOopen)
   console.log(isMessageOpen)
   return (
