@@ -11,7 +11,7 @@ import {useSelector} from "react-redux";
 
 function App() {
   // conect that front and backend
-  const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MzI2MTA3OTRmM2RjYzI3ZTliYjUwYiIsImlhdCI6MTY4MTAzODQ4MCwiZXhwIjoxNjgxNjQzMjgwfQ.WJwGOU_GhgF0B0TE3QoLNJ9oSd83bNj3T6l0IP3TJqU";
+const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MzI2MTA3OTRmM2RjYzI3ZTliYjUwYiIsImlhdCI6MTY4MTA2MzE3NywiZXhwIjoxNjgxNjY3OTc3fQ.WZ4opYKCdczDLZTUSih5YI8jBlmFZgUJMVn-CRZWV4s";
   useEffect(() => {
     const getContent = async () => {
       try {
@@ -24,7 +24,7 @@ function App() {
          
         })
         const data =await response.json()
-        console.log(data)
+        console.log(data.message)
       } catch (error) {
         console.log(error)
       }
@@ -32,7 +32,7 @@ function App() {
     getContent();
   }, []);
 
-  
+
   const isMessageOpen =useSelector(selectSendMessageIsOopen)
   console.log(isMessageOpen)
   return (

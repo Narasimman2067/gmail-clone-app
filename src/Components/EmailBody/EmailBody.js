@@ -3,11 +3,16 @@ import CheckBoxOutlineBlankOutlinedIcon from "@mui/icons-material/CheckBoxOutlin
 import StarOutlineOutlinedIcon from "@mui/icons-material/StarOutlineOutlined";
 import "../EmailBody/EmailBody.css";
 
-const EmailBody = ({ name, subject, time, message }) => {
 
+
+export const EmailBody = ({ name, subject, date, message }) => {
+  
+ 
 
   return (
+    
     <div className="emailbody">
+
       <div className="emailbody-left">
         <CheckBoxOutlineBlankOutlinedIcon />
         <StarOutlineOutlinedIcon />
@@ -23,8 +28,9 @@ const EmailBody = ({ name, subject, time, message }) => {
         </div>
       </div>
       <div className="emailbody-right">
-        <p>{time}</p>
+        <p>{date}</p>
       </div>
+     
     </div>
   );
 };
