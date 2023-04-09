@@ -18,7 +18,7 @@ function App() {
         const response = await fetch(`https://gmailclone-backend-j7ay.onrender.com/user/alluser`, {
           method: "GET",
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "applications/json",
             "x-auth-token":token
           }
          
