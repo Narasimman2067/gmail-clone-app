@@ -18,8 +18,6 @@ import { useDispatch } from "react-redux";
 import { closeSendMessage } from "../../features/mailSlice";
 
 function Compose() {
-  
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MzI2MTA3OTRmM2RjYzI3ZTliYjUwYiIsImlhdCI6MTY4MTAzODQ4MCwiZXhwIjoxNjgxNjQzMjgwfQ.WJwGOU_GhgF0B0TE3QoLNJ9oSd83bNj3T6l0IP3TJqU";
   const [to, setTo] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
