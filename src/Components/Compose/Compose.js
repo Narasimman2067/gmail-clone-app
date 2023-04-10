@@ -25,49 +25,9 @@ function Compose() {
   const [message, setMessage] = useState("");
   const dispatch = useDispatch();
   const formSubmit = (e) => {
-      e.preventDefault();}
-  // const [emailBody, setEmailBody] = useState({
-  //   to: "",
-  //   subject: "",
-  //   message: "",
-  // });
-
-  // const formSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (to === "") {
-  //     return "To is required";
-  //   }
-  //   if (subject === "") {
-  //     return "subject is required";
-  //   }
-  //   if (message === "") {
-  //     return "message is required";
-  //   }
-   
-  // };
-  //  axios
-  //     .post(
-  //       "https://gmailcloneapk-backend.vercel.app/user/post",
-  //       emailBody
-  //     )
-  //     .then((res) => {
-  //       setEmailBody({
-  //         to,
-  //         subject,
-  //         message,
-  //       });
-  //       setTo("");
-  //       setSubject("");
-  //       setMessage("");
-  //       dispatch(closeSendMessage());
-  //     })
-  //     .catch((err) => {
-  //       console.log("Error in emailbody!",err);
-  //     });
-
-  // const onChange = (e) => {
-  //   setEmailBody({ ...emailBody, [e.target.name]: e.target.value });
-  // };
+      e.preventDefault()
+    }
+ 
 
   return (
     <div className="compose">
