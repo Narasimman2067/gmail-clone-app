@@ -14,13 +14,7 @@
   align-items: center;
 }
 
-/* .emailbody .emailbody-middle {
-display:grid !important;
-justify-content: left !important;
-white-space:wrap !important;
-max-width: 700px;
-overflow: hidden;
-} */
+
 .emailbody .emailbody-right {
   display: flex;
   align-items: center;
@@ -28,10 +22,11 @@ overflow: hidden;
   justify-content: center;
 }
 .emailbody:hover {
-  background-color: whitesmoke;
+  background-color:orangered;
   box-shadow: 2px 1px 2px 1px grey;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.5s transform ease-in-out;
 }
 
 /* smartphone landscape */
