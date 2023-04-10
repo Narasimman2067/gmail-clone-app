@@ -16,45 +16,54 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import FormatColorTextIcon from "@mui/icons-material/FormatColorText";
 import { useDispatch } from "react-redux";
 import { closeSendMessage } from "../../features/mailSlice";
-import axios from "axios";
+
+
+
 function Compose() {
   const [to, setTo] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const dispatch = useDispatch();
-  const [emailBody, setEmailBody] = useState({
-    to: "",
-    subject: "",
-    message: "",
-  });
-
   const formSubmit = (e) => {
-    e.preventDefault();
-    if (to === "") {
-      return "To is required";
-    }
-    if (subject === "") {
-      return "subject is required";
-    }
-    if (message === "") {
-      return "message is required";
-    }
-    axios
-      .post(
-        "https://gmailcloneapk-backend.vercel.app/user/post",
-        emailBody
-      )
-      .then((res) => {
-        setEmailBody({
-          to: "",
-          subject: "",
-          message: "",
-        });
-      })
-      .catch((err) => {
-        console.log("Error in emailbody!");
-      });
-  };
+      e.preventDefault();}
+  // const [emailBody, setEmailBody] = useState({
+  //   to: "",
+  //   subject: "",
+  //   message: "",
+  // });
+
+  // const formSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (to === "") {
+  //     return "To is required";
+  //   }
+  //   if (subject === "") {
+  //     return "subject is required";
+  //   }
+  //   if (message === "") {
+  //     return "message is required";
+  //   }
+   
+  // };
+  //  axios
+  //     .post(
+  //       "https://gmailcloneapk-backend.vercel.app/user/post",
+  //       emailBody
+  //     )
+  //     .then((res) => {
+  //       setEmailBody({
+  //         to,
+  //         subject,
+  //         message,
+  //       });
+  //       setTo("");
+  //       setSubject("");
+  //       setMessage("");
+  //       dispatch(closeSendMessage());
+  //     })
+  //     .catch((err) => {
+  //       console.log("Error in emailbody!",err);
+  //     });
 
   // const onChange = (e) => {
   //   setEmailBody({ ...emailBody, [e.target.name]: e.target.value });
