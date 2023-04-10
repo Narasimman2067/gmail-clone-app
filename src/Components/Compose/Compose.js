@@ -16,17 +16,17 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import FormatColorTextIcon from "@mui/icons-material/FormatColorText";
 import { useDispatch } from "react-redux";
 import { closeSendMessage } from "../../features/mailSlice";
-
+import axios from "axios";
 function Compose() {
   const [to, setTo] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const dispatch = useDispatch();
-  // const [emailBody, setEmailBody] = useState({
-  //   to: "",
-  //   subject: "",
-  //   message: "",
-  // });
+  const [emailBody, setEmailBody] = useState({
+    to: "",
+    subject: "",
+    message: "",
+  });
 
   const formSubmit = (e) => {
     e.preventDefault();
@@ -39,21 +39,21 @@ function Compose() {
     if (message === "") {
       return "message is required";
     }
-  //   axios
-  //     .post(
-  //       "https://gmailcloneapk-backend.vercel.app/user/emailpost",
-  //       emailBody
-  //     )
-  //     .then((res) => {
-  //       setEmailBody({
-  //         to: "",
-  //         subject: "",
-  //         message: "",
-  //       });
-  //     })
-  //     .catch((err) => {
-  //       console.log("Error in emailbody!");
-  //     });
+    axios
+      .post(
+        "https://gmailcloneapk-backend.vercel.app/user/post",
+        emailBody
+      )
+      .then((res) => {
+        setEmailBody({
+          to: "",
+          subject: "",
+          message: "",
+        });
+      })
+      .catch((err) => {
+        console.log("Error in emailbody!");
+      });
   };
 
   // const onChange = (e) => {

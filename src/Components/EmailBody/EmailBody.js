@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CheckBoxOutlineBlankOutlinedIcon from "@mui/icons-material/CheckBoxOutlineBlankOutlined";
 import StarOutlineOutlinedIcon from "@mui/icons-material/StarOutlineOutlined";
 import "../EmailBody/EmailBody.css";
@@ -6,7 +6,26 @@ import "../EmailBody/EmailBody.css";
 
 
 export const EmailBody = ({ name, subject, date, message }) => {
-  
+  const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MzI2MTA3OTRmM2RjYzI3ZTliYjUwYiIsImlhdCI6MTY4MTA2MzE3NywiZXhwIjoxNjgxNjY3OTc3fQ.WZ4opYKCdczDLZTUSih5YI8jBlmFZgUJMVn-CRZWV4s";
+  useEffect(() => {
+    const getContent = async () => {
+      try {
+        const response = await fetch(`https://gmailclone-backend-j7ay.onrender.com/user/alluser`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "applications/json",
+            "x-auth-token":token
+          }
+         
+        })
+        const data =await response.json()
+        console.log(data.message)
+      } catch (error) {
+        console.log(error)
+      }
+    };
+    getContent();
+  }, []);
  
 
   return (
