@@ -5,7 +5,9 @@ import EmailType from "./EmailType";
 import EmailBody from "../EmailBody/EmailBody";
 
 const EmailLists = () => {
+  
   const [emails,setEmails]=useState([])
+  
   const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MzI2MTA3OTRmM2RjYzI3ZTliYjUwYiIsImlhdCI6MTY4MTA2MzE3NywiZXhwIjoxNjgxNjY3OTc3fQ.WZ4opYKCdczDLZTUSih5YI8jBlmFZgUJMVn-CRZWV4s";
   useEffect(() => {
     const getContent = async () => {
