@@ -70,12 +70,12 @@
     background-color: whitesmoke;
   }
   .emailtype-lists--active {
-    border-bottom: 3px solid red !important;
+    border-bottom: 5px solid rgb(57, 18, 233) !important;
   }
   
   .emailtype-lists--active,
   .emailtype-lists--active svg {
-    color: red !important;
+    color: rgb(255, 242, 0) !important;
     font-weight: bold;
   }
   

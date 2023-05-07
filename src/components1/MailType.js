@@ -7,7 +7,7 @@ import  PeopleOutlineOutlinedIcon  from '@mui/icons-material/PeopleOutlineOutlin
 
 const MailType = () => {
   return (
-    <div className="emailtype">
+    <div style={{color:"white"}}  className="emailtype">
       <div className="emailtype-lists emailtype-lists--active">
         <IconButton>
                 <InboxIcon/>
