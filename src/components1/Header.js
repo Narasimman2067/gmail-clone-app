@@ -54,7 +54,8 @@ export default Header;
  })
 
  const SearchWrapper =styled(Box)({
-backgroundColor:"lightgrey",
+backgroundColor:"grey",
+colorAdjust:"white !important",
 marginLeft:80,
 borderRadius:8,
 minWidth:80,
