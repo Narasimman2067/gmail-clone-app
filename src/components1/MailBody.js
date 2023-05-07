@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import CheckBoxOutlineBlankOutlinedIcon from "@mui/icons-material/CheckBoxOutlineBlankOutlined";
 import StarOutlineOutlinedIcon from "@mui/icons-material/StarOutlineOutlined";
-import "../EmailBody/EmailBody.css";
+import "../Css/MailBody.css";
 
 
 
-export const EmailBody = ({ name, subject,dateSaved, message }) => {
+export const MailBody = ({ name, subject,dateSaved, message }) => {
   const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MzI2MTA3OTRmM2RjYzI3ZTliYjUwYiIsImlhdCI6MTY4MTA2MzE3NywiZXhwIjoxNjgxNjY3OTc3fQ.WZ4opYKCdczDLZTUSih5YI8jBlmFZgUJMVn-CRZWV4s";
   useEffect(() => {
     const getContent = async () => {
@@ -26,6 +26,9 @@ export const EmailBody = ({ name, subject,dateSaved, message }) => {
     };
     getContent();
   }, []);
+ 
+  
+
  
 
   return (
@@ -54,4 +57,4 @@ export const EmailBody = ({ name, subject,dateSaved, message }) => {
   );
 };
 
-export default EmailBody;
+export default MailBody;

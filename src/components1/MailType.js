@@ -4,7 +4,8 @@ import  InboxIcon  from '@mui/icons-material/Inbox';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import  PeopleOutlineOutlinedIcon  from '@mui/icons-material/PeopleOutlineOutlined';
 
-const EmailType = () => {
+
+const MailType = () => {
   return (
     <div className="emailtype">
       <div className="emailtype-lists emailtype-lists--active">
@@ -32,4 +33,4 @@ const EmailType = () => {
   );
 };
 
-export default EmailType;
+export default MailType;

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "./EmailLists.css";
-import EmailListController from "./EmailListController";
-import EmailType from "./EmailType";
-import EmailBody from "../EmailBody/EmailBody";
+import "../Css/MailLists.css";
+import MailListController from "./MailListController";
+import MailBody from "./MailBody";
+import MailType from "./MailType";
 
-const EmailLists = () => {
+
+
+const MailLists = () => {
   
   const [emails,setEmails]=useState([])
   
@@ -31,21 +33,18 @@ const EmailLists = () => {
   }, []);
   return (
     <div className="emaillist">
-      <EmailListController />
-      <EmailType  />
+      <MailListController/>
+      <MailType/>
 
       {
         emails.map(({name,message,subject,dateSaved})=>{
-          return  <EmailBody name={name} subject={subject} message={message} dateSaved={dateSaved}/>
-          // <EmailBody name="rajasrinath" subject="Reactjs and backend" message="learning react js" time="11:20 am"/>
-          // <EmailBody name="rajapraga" subject="mongo db" message="learning mongoose and backend" time="12:20 pm"/>
-          // <EmailBody name="gokulraja" subject="nodejs" message="deploy node js " time="10:20 pm"/>
-        
+          return  <MailBody name={name} subject={subject} message={message} dateSaved={dateSaved}/>
+        //   
         })
       }
-     
+  
     </div>
   );
 };
 
-export default EmailLists;
+export default MailLists;

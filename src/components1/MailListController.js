@@ -6,7 +6,9 @@ import RefreshOutlinedIcon from '@mui/icons-material/RefreshOutlined';
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-const EmailListController = () => {
+
+
+const MailListController = () => {
   return (
     <div className="emailcontainer">
       
@@ -38,4 +40,4 @@ const EmailListController = () => {
   );
 };
 
-export default EmailListController;
+export default MailListController;
