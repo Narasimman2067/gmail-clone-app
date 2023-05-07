@@ -80,7 +80,7 @@ function Login() {
               src="https://play-lh.googleusercontent.com/zWhdpn-2_QjyoDmrnR1W8s2BZ1D6OvR3MDSCT5g1BX0aVrZB3B6Lw91gIzZ02UbF1ZGS"
               alt=""
             />
-            <h1>Chat Freind</h1>
+            <h1 style={{display:"flex",gap:"1rem",marginLeft:"2rem"}}>Login</h1>
           </div>
           <div className="input">
             <input

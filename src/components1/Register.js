@@ -86,7 +86,7 @@ function Register() {
       if(data.status === true){
         localStorage.setItem(process.env.REACT_APP_LOCALHOST_KEY,JSON.stringify(data.user))
       }
-      navigate("/main")
+      navigate("/login")
       
      
     }
@@ -104,7 +104,7 @@ function Register() {
               src="https://play-lh.googleusercontent.com/zWhdpn-2_QjyoDmrnR1W8s2BZ1D6OvR3MDSCT5g1BX0aVrZB3B6Lw91gIzZ02UbF1ZGS"
               alt=""
             />
-            <h1>Register</h1>
+            <h1 style={{display:"flex",marginLeft:"1rem"}}>Register</h1>
           </div>
           <div className="input">
             <input

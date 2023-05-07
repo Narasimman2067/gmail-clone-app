@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 import Main from "./components1/Main";
 import Register from "./components1/Register";
 import Login from "./components1/Login";
 import { Route, Routes} from "react-router-dom";
+import Header from "./components1/Header";
 
 function App() {
   // conect that front and backend
@@ -32,14 +33,20 @@ function App() {
     getContent();
   }, []);
 
- 
+
+  const [openDrawer, setOPenDrawer] =useState(true)
+  const toggleDrawer = () =>{
+
+    setOPenDrawer(prevState =>!prevState);
+
+  }
 
   return (
    
     <div className="App" >
      
-   
-      
+    
+      <Header toggleDrawer={toggleDrawer}/>
         <Routes>
         <Route path="/" element={<Register />} />
         <Route path="/main" element={ <Main />} /> 
