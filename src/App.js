@@ -46,6 +46,7 @@ function App() {
      
     
       <Header 
+      openDrawer={openDrawer}
       toggleDrawer={toggleDrawer}
       />
         <Routes>

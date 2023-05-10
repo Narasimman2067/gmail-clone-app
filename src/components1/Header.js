@@ -16,18 +16,15 @@ import SearchIcon from "@mui/icons-material/Search";
 import HelpIcon from "@mui/icons-material/Help";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AppsIcon from "@mui/icons-material/Apps";
-import  CloseOutlinedIcon  from '@mui/icons-material/CloseOutlined';
+import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 
-function Header({ toggleDrawer,name}) {
-  
-  
-const [openDialog,setOPenDialog] =useState(false)
-  
-  const onComposeClick =()=>{
+function Header({ toggleDrawer, name }) {
+  const [openDialog, setOPenDialog] = useState(false);
+
+  const onComposeClick = () => {
     setOPenDialog(true);
-  }
+  };
 
- 
   // const closeComposeMail =()=>{
 
   //   setOPenDialog(false)
@@ -61,35 +58,35 @@ const [openDialog,setOPenDialog] =useState(false)
             <IconButton>
               <AppsIcon />
             </IconButton>
-           
+
             <Avatar
-            
-             onClick={()=>onComposeClick()}
-             open={openDialog} 
-             PaperProps={{ sx: dialogStyle }}
-             
-             src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQS3FXn0alyEfNkVm9kWa0yA700XH0i3uV-lJzp7izIK10Ez8mh" 
-             >
-             </Avatar>
-          
-            <Dialog 
-             open={openDialog} 
-             PaperProps={{ sx: dialogStyle }}>
-             
+              onClick={() => onComposeClick()}
+              open={openDialog}
+              PaperProps={{ sx: dialogStyle }}
+              src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQS3FXn0alyEfNkVm9kWa0yA700XH0i3uV-lJzp7izIK10Ez8mh"
+            ></Avatar>
+
+            <Dialog open={openDialog} PaperProps={{ sx: dialogStyle }}>
               <Box>
-              <h3>Profile</h3>
-              <IconButton>
-                <CloseOutlinedIcon
-                 onClick={() => setOPenDialog(false)}
-                />
+                <IconButton>
+                  <CloseOutlinedIcon
+                    style={{ color: "white"}}
+                    onClick={() => setOPenDialog(false)}
+                  />
                 </IconButton>
-              
-              <a href="/login" 
-             
-              >Logout</a>
+                <a
+                  href="/login"
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    marginRight:"1rem"
+                  }}
+                >
+                  Logout
+                </a>
               </Box>
-              </Dialog>
-              
+            </Dialog>
           </OptionsWrapper>
         </Toolbar>
       </StyledAppBar>
@@ -128,15 +125,15 @@ const OptionsWrapper = styled(Box)({
   marginLeft: "10px",
 });
 const dialogStyle = {
-  position:"absolute",
-  display:"flex",
-  top:"1px",
-  bottom:"20px !important",
-  right:0,
-  background: "White",
+  position: "absolute",
+  display: "flex",
+  top: "1px",
+  bottom: "20px !important",
+  right: 0,
+  background: "black",
   boxShadow: "none",
-  padding:"5rem 0rem 0rem 1rem",
-  borderRadius: "10px 10px 0 0",
-  width:"20%",
-  height:"30vh",
+  padding: "5rem 0rem 0rem 1rem",
+  borderRadius: "10px 10px",
+  width: "20%",
+  height: "30vh",
 };
