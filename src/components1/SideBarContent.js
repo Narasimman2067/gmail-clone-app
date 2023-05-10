@@ -24,14 +24,12 @@ import VideocamOutlinedIcon from "@mui/icons-material/VideocamOutlined";
 import KeyboardIcon from "@mui/icons-material/Keyboard";
 import SideBarLists1 from "./SideBarLIst1";
 import ComposeMail from "./ComposeMail";
-// import { useDispatch } from "react-redux";
-// import { openSendMessage } from "../../features/mailSlice";
 
 
 
 
 const SideBarContent = () => {
-//   const dispatch = useDispatch();
+
 
 
 
@@ -49,7 +47,6 @@ const onComposeClick =()=>{
       variant="contained"
       startIcon={<CreateOutlinedIcon />} 
       className="compose-btn1"
-    //   sx={{background:" #2684d1"}}
       onClick={()=>onComposeClick()}
       
       
