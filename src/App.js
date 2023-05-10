@@ -34,12 +34,12 @@ function App() {
   }, []);
 
 
-  // const [openDrawer, setOPenDrawer] =useState(true)
-  // const toggleDrawer = () =>{
+  const [openDrawer, setOPenDrawer] =useState(true)
+  const toggleDrawer = () =>{
 
-  //   setOPenDrawer(prevState =>!prevState);
+    setOPenDrawer(prevState =>!prevState);
 
-  // }
+  }
 
   return (
    
@@ -47,7 +47,7 @@ function App() {
      
     
       <Header 
-      // toggleDrawer={toggleDrawer}
+      toggleDrawer={toggleDrawer}
       />
         <Routes>
         <Route path="/" element={<Register />} />
