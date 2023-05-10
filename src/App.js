@@ -14,7 +14,8 @@ function App() {
     const getContent = async () => {
       try {
         const response = await fetch(
-          `https://gmailclone-backend-j7ay.onrender.com/user/alluser`,
+          // `https://gmailclone-backend-j7ay.onrender.com/user/alluser`,
+          `https://gmailcloneapk-backend.vercel.app/user/alluser`,
           {
             method: "GET",
             headers: {
