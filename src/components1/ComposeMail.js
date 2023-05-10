@@ -17,11 +17,11 @@ import FormatColorTextIcon from "@mui/icons-material/FormatColorText";
 import "../Css/ComposeMail.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import axios from 'axios';
 
 
 function ComposeMail({ openDialog,setOPenDialog}) {
-
+  
 const [focus,setFocus] =useState(false)
 const [data,setData] =useState({})
 const [name, setName] = useState("");
@@ -53,6 +53,13 @@ const [message, setMessage] = useState("");
     };
     getContent();
   }, []);
+
+  
+
+
+
+
+
 
 const closeComposeMail =()=>{
 
@@ -140,7 +147,7 @@ const toastOptions = {
             onSubmit={formSubmit}
           >
             <Box className="compose-body">
-              <Box className="compose-body-form">
+              <Box className="compose-body-form" >
                 <Box sx={{ display: "flex", flexDirection: "Column" }}>
                   
                   <div   onClick={()=>setFocus(true)} >

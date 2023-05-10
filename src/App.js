@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import "./App.css";
 
 import Main from "./components1/Main";
@@ -34,19 +34,21 @@ function App() {
   }, []);
 
 
-  const [openDrawer, setOPenDrawer] =useState(true)
-  const toggleDrawer = () =>{
+  // const [openDrawer, setOPenDrawer] =useState(true)
+  // const toggleDrawer = () =>{
 
-    setOPenDrawer(prevState =>!prevState);
+  //   setOPenDrawer(prevState =>!prevState);
 
-  }
+  // }
 
   return (
    
     <div className="App" >
      
     
-      <Header toggleDrawer={toggleDrawer}/>
+      <Header 
+      // toggleDrawer={toggleDrawer}
+      />
         <Routes>
         <Route path="/" element={<Register />} />
         <Route path="/main" element={ <Main />} /> 

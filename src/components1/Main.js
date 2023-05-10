@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Header from './Header'
 import SideBar from '../components1/SideBar';
-import DisplayMails from './DisplayMails';
+
 import MailLists from './MailLists';
 
 const Main = () => {
@@ -17,10 +17,11 @@ const Main = () => {
     <div>
 
 <Header toggleDrawer={toggleDrawer}/>
-<SideBar openDrawer={openDrawer}/>
+<SideBar toggleDrawer={toggleDrawer} openDrawer={openDrawer}/>
 <MailLists/>
 
-<div><DisplayMails/></div>
+
+
 
     </div>
   )
